@@ -72,11 +72,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border: 1px solid red; */
+  /* border-bottom: 2px solid yellow; */
+}
+
+.logo {
+  transform: translateY(25%);
 }
 
 nav {
-  width: 30%;
   height: 100%;
   position: relative;
 }
@@ -86,21 +89,47 @@ nav .line {
   background-color: var(--bleu);
   position: absolute;
   top: 0;
-  left: 5%;
+  left: 0;
 }
+
 nav ul {
   height: inherit;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  /* position: relative; */
 }
 
-nav ul li:hover {
-  cursor: pointer;
+nav ul li {
+  height: inherit;
+  width: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* border: 1px solid tomato; */
 }
 nav ul li:nth-child(3) {
   font-weight: 700;
   color: var(--bleu);
+}
+nav ul li:hover {
+  cursor: pointer;
+  color: var(--bleu);
+  font-weight: bold;
+}
+nav ul li:nth-child(1):hover ~ nav .line {
+  left: 0;
+  background-color: red;
+}
+nav ul li:nth-child(2):hover ~ nav .line {
+  left: 120px;
+  background-color: red;
+}
+nav ul li:nth-child(3):hover ~ nav .line {
+  left: 240px;
+  background-color: red;
 }
 
 nav .active {
@@ -174,7 +203,7 @@ form button i::after {
 /**************************** FILTERS **************************/
 
 .filters {
-  height: 40px;
+  height: max-content;
   width: 70%;
   display: flex;
   justify-content: space-between;
@@ -192,6 +221,8 @@ form button i::after {
   width: 90%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
   /* border: 1px solid greenyellow; */
 }
 .filters ul li {
@@ -274,6 +305,10 @@ form button i::after {
 }
 .card span {
   font-weight: 600;
+}
+.card:hover {
+  cursor: pointer;
+  transform: translateX(-1px) translateY(-1px);
 }
 i {
   color: var(--bleu);
@@ -647,11 +682,12 @@ footer li {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    padding: 0 10px 5px;
+    padding: 0 10px 10px;
     border-bottom: 2px solid lightgray;
   }
 
   .logo {
+    transform: translateY(0%);
     align-self: flex-start;
     margin-left: 10px;
   }
@@ -669,7 +705,9 @@ footer li {
     z-index: 10;
   }
   nav ul :nth-child(3) {
+    height: min-content;
     width: min-content;
+    display: block;
     position: absolute;
     top: 20%;
     right: 25px;
@@ -682,18 +720,18 @@ footer li {
 
   /************************ SECTIONS COMMUN *******************/
 
-  #intro,
   #populaire,
-  #hebergement,
-  #activities {
-    padding: 2vh 3vw;
+  #hebergement {
+    padding: 5% 5%;
   }
   /*************************** INTRO *************************/
 
   #intro {
-    height: 100%;
+    height: calc(85vh - 130px);
     justify-content: space-around;
     order: 2;
+    padding: 0 10px 5px;
+
     /* border: 2px solid red; */
   }
   #intro form {
@@ -725,18 +763,16 @@ footer li {
   form button span {
     display: none;
   }
-  /* .info {
-    border: 2px solid red;
-  } */
   .filters {
+    width: 100%;
     flex-direction: column;
     justify-content: center;
-    height: 300px;
+    height: 200px;
   }
   .filters ul {
     height: 100%;
+    width: inherit;
     flex-wrap: wrap;
-    /* justify-content: space-evenly; */
   }
   .info__p {
     font-size: 0.9rem;
@@ -752,20 +788,30 @@ footer li {
     height: 100%;
     width: 100%;
     background-color: white;
+    /* border: 2px solid yellow; */
   }
 
   #hebergement h2 {
     padding-bottom: 2vh;
   }
+  #hebergement button {
+    background-color: white;
+  }
+
   .cards__hebergement {
     flex-direction: column;
-    align-items: center;
-
     width: 100%;
+    /* border: 2px solid red; */
   }
+
   .cards__hebergement .card {
-    width: 80%;
+    width: 100%;
     margin-bottom: 20px;
+    /* border: 2px solid red; */
+  }
+
+  .cards__hebergement .card .img {
+    background-position: center 60%;
   }
 
   /*************************** POPULAIRE **********************/
@@ -773,16 +819,31 @@ footer li {
   #populaire {
     order: 3;
     border-radius: 0;
+    width: 100%;
+    align-items: center;
+    /* border: 2px solid pink; */
   }
-
   .cards__populaire {
     align-items: center;
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  .cards__populaire .card {
+    width: 100%;
   }
 
   /*************************** ACTIVITIES *********************/
 
   #activities {
     order: 5;
+    /* align-items: center; */
+  }
+  #activities h2 {
+    margin-left: 5%;
+  }
+  .cards__activities {
+    width: 90%;
+    align-self: center;
   }
 
   /***************************** FOOTER ***********************/
@@ -795,9 +856,9 @@ footer li {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 3vh 0 0 10px;
+    padding: 10% 0 5% 10px;
   }
   .footer__menu {
-    padding-bottom: 2vh;
+    padding-bottom: 30px;
   }
 }
