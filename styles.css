@@ -529,7 +529,7 @@ i {
   background-color: white;
   border-radius: 15px;
   height: max-content;
-  min-width: 260px;
+  min-width: 250px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
   /* border: 1px solid red; */
@@ -624,13 +624,13 @@ footer ul {
   align-items: flex-start;
   justify-content: flex-start;
   padding-top: 10px;
-  /* border: 1px solid red; */
 }
 footer li {
   padding: 3px 0;
 }
 .footer__container {
-  width: 95%;
+  width: 90%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   /* border: 1px solid red; */
