@@ -208,7 +208,7 @@ form button:hover {
 /**************************** FILTERS **************************/
 
 .filters {
-  height: min-content;
+  /* height: 150px; */
   width: 72%;
   display: flex;
   justify-content: space-between;
@@ -313,7 +313,7 @@ form button:hover {
   max-height: 100%;
   background-color: var(--background);
   border-radius: 20px;
-  padding: 30px 30px;
+  padding: 25px 20px;
 }
 #hebergement h2,
 #populaire h2,
@@ -635,7 +635,6 @@ footer li {
   nav {
     position: static;
     width: 100%;
-    /* border: 1px solid pink; */
   }
   nav .line {
     top: 100%;
@@ -654,7 +653,6 @@ footer li {
   nav ul li {
     width: 50%;
     text-align: center;
-    /* border: 1px solid pink; */
   }
   nav ul li:nth-child(1):hover ~ .line {
     left: 0;
@@ -665,18 +663,6 @@ footer li {
   nav ul li:nth-child(3):hover ~ .line {
     position: fixed;
     left: auto;
-  }
-
-  /************************ SECTIONS COMMUN *******************/
-
-  #populaire,
-  #hebergement,
-  #activities {
-    padding: 5% 5%;
-  }
-  .cards__populaire,
-  .cards__hebergement {
-    align-items: center;
   }
 
   /*************************** INTRO *************************/
@@ -699,7 +685,6 @@ footer li {
     width: 95%;
     margin: 4vh 0;
     padding-left: 10px;
-    /* border: 1px solid yellowgreen; */
   }
   form input {
     width: calc(100% - 105px);
@@ -728,7 +713,7 @@ footer li {
     display: none;
   }
   .filters {
-    height: 220px;
+    height: 150px;
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -748,6 +733,18 @@ footer li {
   }
   .info__p {
     font-size: 0.9rem;
+  }
+
+  /************************ SECTIONS COMMUN *******************/
+
+  /* #populaire,
+  #hebergement,
+  #activities {
+    padding: 5% 5%;
+  } */
+  .cards__populaire,
+  .cards__hebergement {
+    align-items: center;
   }
 
   /************************* HEBERGEMENT *********************/
@@ -852,10 +849,26 @@ footer li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* padding-top: 1.5vh; */
+    border: 10px solid red;
+  }
+  header,
+  #intro {
+    padding: 0 20px;
   }
   nav ul {
     justify-content: space-between;
+  }
+  .filters {
+    height: 120px;
+    width: 72%;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* padding-left: 10px; */
+  }
+  .filters ul {
+    height: inherit;
+    width: 90%;
+    flex-wrap: wrap;
   }
 
   /************************* HEBERGEMENT **********************/
