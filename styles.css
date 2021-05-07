@@ -380,11 +380,11 @@ i {
   /* border: 1px solid red; */
 }
 .cards__hebergement .card {
+  height: 180px;
+  flex: 1 1 30%;
   background-color: white;
   border-radius: 15px;
-  height: 180px;
-  width: 32%;
-  margin-bottom: 20px;
+  margin: 0 20px 20px 0;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
@@ -751,17 +751,11 @@ footer li {
 
   #hebergement {
     order: 4;
-    height: 100%;
-    width: 100%;
     background-color: white;
-    /* border: 2px solid yellow; */
   }
-  #hebergement h2 {
-    padding-bottom: 2vh;
-  }
+
   #hebergement button {
     background-color: white;
-    margin-top: 1vh;
   }
   .cards__hebergement {
     flex-direction: column;
@@ -782,12 +776,10 @@ footer li {
   /*************************** POPULAIRE **********************/
 
   #populaire {
-    height: max-content;
     order: 3;
+    height: max-content;
     border-radius: 0;
     align-items: center;
-    justify-content: space-evenly;
-    /* border: 2px solid pink; */
   }
   .cards__populaire .card {
     height: 150px;
@@ -852,7 +844,6 @@ footer li {
   main {
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
   header,
   #intro {
@@ -888,13 +879,17 @@ footer li {
     background-color: white;
     flex-direction: row;
   }
+  #hebergement button {
+    background-color: white;
+  }
   .cards__hebergement {
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
   }
   .cards__hebergement .card {
-    flex: 1 1 30%;
+    flex: 1 1 30;
     margin: 0 20px 20px 0;
   }
 
