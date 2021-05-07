@@ -497,9 +497,9 @@ i {
 }
 .cards__activities {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: min-content 15px min-content 40px;
-  column-gap: calc((100% - 1040px) / 3);
+  grid-template-columns: repeat(4, 270px);
+  grid-template-rows: min-content 40px min-content 40px;
+  column-gap: calc((100% - (270px * 4)) / 3);
 }
 .cards__activities :nth-child(1) {
   grid-column: 1;
@@ -538,8 +538,6 @@ i {
 .cards__activities .card {
   background-color: white;
   border-radius: 15px;
-  height: max-content;
-  width: 260px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
@@ -794,7 +792,7 @@ footer li {
   .cards__populaire .card {
     height: 150px;
     min-width: 200px;
-    margin-bottom: 2.5%;
+    margin-bottom: 20px;
   }
 
   /*************************** ACTIVITIES *********************/
@@ -818,8 +816,7 @@ footer li {
   .cards__activities .card {
     height: 100%;
     width: 100%;
-    /* max-width: 400px; */
-    margin: 15px 0;
+    margin: 20px 0;
   }
   .cards__activities .card .card__img {
     height: 150px;
@@ -890,15 +887,15 @@ footer li {
     order: 4;
     background-color: white;
     flex-direction: row;
-    flex-wrap: wrap;
   }
   .cards__hebergement {
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    /* border: 1px solid red; */
   }
   .cards__hebergement .card {
-    width: 30%;
+    flex: 1 1 30%;
+    margin: 0 20px 20px 0;
   }
 
   /************************* POPULAIRE ***********************/
@@ -914,9 +911,9 @@ footer li {
     justify-content: space-evenly;
   }
   .cards__populaire .card {
-    width: 33%;
+    flex: 1 1 30%;
     min-width: 300px;
-    margin-bottom: 20px;
+    margin: 0 20px 20px 0;
   }
 
   /************************* ACTIVITIES ***********************/
@@ -927,13 +924,13 @@ footer li {
   }
   .cards__activities {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 0;
   }
   .cards__activities .card {
-    margin-right: 5px;
-    margin-bottom: 20px;
-    width: 30%;
+    flex: 1 1 30%;
+    margin: 0 20px 20px 0;
   }
   .cards__activities .card .card__img {
     height: 150px;
