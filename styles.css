@@ -37,13 +37,10 @@ body {
   /* border: 10px solid tomato; */
 }
 .body__container {
-  width: 90%;
+  width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 67% 1fr;
-  grid-column-gap: 2vw;
-  grid-row-gap: 2vh;
+  padding-bottom: 3vh;
 }
 
 ul {
@@ -138,28 +135,41 @@ nav .active {
   color: var(--bleu);
 }
 
+main {
+  display: grid;
+  grid-template-columns: 67% 1fr;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vh;
+}
 /***************************************************************/
 /*                             INTRO 
 /***************************************************************/
 
 #intro {
-  grid-row: 2;
+  grid-row: 1;
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 300px;
+  /* border: 1px solid rgb(163, 182, 126); */
 }
 
 /*************************** SEARCH BAR ************************/
 
-#intro form {
+.title__container {
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+}
+form {
   height: 40px;
   width: 350px;
   display: flex;
   justify-content: flex-start;
-
-  /* border: 1px solid tomato; */
+  /* border: 1px solid red; */
 }
 form .icon__container {
   background-color: var(--background);
@@ -182,6 +192,7 @@ form input {
   padding: 0 10px;
   font-size: 1.1rem;
   outline: none;
+  border-radius: 0;
 }
 form button {
   border: none;
@@ -200,7 +211,6 @@ form button i::before,
 form button i::after {
   display: none;
 }
-
 form button:hover {
   cursor: pointer;
 }
@@ -208,10 +218,10 @@ form button:hover {
 /**************************** FILTERS **************************/
 
 .filters {
-  /* height: 150px; */
   width: 72%;
   display: flex;
   justify-content: space-between;
+  /* border: 1px solid red; */
 }
 .filters h2 {
   display: flex;
@@ -287,6 +297,7 @@ form button:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  /* border: 1px solid red; */
 }
 .info .icon__container {
   height: 20px;
@@ -344,11 +355,13 @@ i {
   font-size: 0.75rem;
   margin-right: 1%;
 }
+
 /***************************************************************/
 /*                  SECTION HÉBERGEMENTS 
 /***************************************************************/
 
 #hebergement {
+  grid-row: 2;
   grid-column: 1/2;
   height: 100%;
 }
@@ -370,8 +383,8 @@ i {
   background-color: white;
   border-radius: 15px;
   height: 180px;
-  width: 230px;
-  margin-bottom: 2.5%;
+  width: 32%;
+  margin-bottom: 20px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
@@ -408,6 +421,7 @@ i {
 /***************************************************************/
 
 #populaire {
+  grid-row: 2;
   grid-column: 2/3;
   /* border: 1px solid red; */
 }
@@ -427,7 +441,7 @@ i {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   /* border: 1px solid red; */
 }
 .cards__populaire .card {
@@ -439,6 +453,7 @@ i {
   height: 130px;
   width: 100%;
   padding: 4px;
+  margin-bottom: 20px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
   /* border: 1px solid red; */
@@ -449,7 +464,7 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px 15px;
+  padding: 5px 10px;
   /* border: 1px solid red; */
 }
 #populaire .card:nth-child(2) i:nth-child(5),
@@ -459,7 +474,6 @@ i {
 .cards__populaire .card .card__img {
   height: 100%;
   width: 40%;
-  /* border: 1px solid red; */
 }
 .cards__populaire .card .card__img img {
   object-fit: cover;
@@ -474,17 +488,18 @@ i {
 /***************************************************************/
 
 #activities {
+  grid-row: 4;
   grid-column: 1/3;
   grid-row: 4;
   height: 100%;
   grid-auto-flow: row;
-  padding: 30px 30px;
+  padding: 30px 0;
 }
 .cards__activities {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: min-content 15px min-content 40px;
-  column-gap: 35px;
+  column-gap: calc((100% - 1040px) / 3);
 }
 .cards__activities :nth-child(1) {
   grid-column: 1;
@@ -524,7 +539,7 @@ i {
   background-color: white;
   border-radius: 15px;
   height: max-content;
-  width: 250px;
+  width: 260px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
@@ -563,7 +578,7 @@ i {
 /***************************************************************/
 
 footer {
-  height: 170px;
+  height: 200px;
   width: 100vw;
   background-color: var(--background);
   display: flex;
@@ -574,24 +589,14 @@ footer {
 }
 footer h3 {
   font-weight: bolder;
-}
-footer ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-top: 10px;
-}
-footer li {
-  padding: 3px 0;
+  padding-bottom: 10px;
 }
 .footer__container {
+  height: 70%;
   width: 90%;
   max-width: 1200px;
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
 }
 .footer__menu {
   width: calc(100% / 3);
@@ -599,8 +604,9 @@ footer li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
-  /* border: 1px solid red; */
+}
+footer li {
+  padding: 3px 0;
 }
 
 /***************************************************************/
@@ -609,6 +615,10 @@ footer li {
 
 @media screen and (max-width: 768px) {
   .body__container {
+    width: 100%;
+    min-width: 320px;
+  }
+  main {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -618,7 +628,7 @@ footer li {
   /************************** HEADER **************************/
 
   header {
-    min-height: 120px;
+    height: 100px;
     width: 100%;
     order: 1;
     flex-direction: column;
@@ -668,22 +678,19 @@ footer li {
   /*************************** INTRO *************************/
 
   #intro {
-    height: max-content;
+    height: 500px;
     justify-content: space-between;
     order: 2;
     padding: 2vh 10px 0 10px;
   }
-  #intro h1,
-  #intro .title__p {
-    padding: 0 10px;
+  .title__container {
+    height: 100px;
   }
-  #intro .title__p {
-    line-height: 2rem;
-  }
+
   #intro form {
     height: 50px;
     width: 95%;
-    margin: 4vh 0;
+    margin: 2vh 0;
     padding-left: 10px;
   }
   form input {
@@ -713,7 +720,7 @@ footer li {
     display: none;
   }
   .filters {
-    height: 150px;
+    height: 200px;
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -737,11 +744,6 @@ footer li {
 
   /************************ SECTIONS COMMUN *******************/
 
-  /* #populaire,
-  #hebergement,
-  #activities {
-    padding: 5% 5%;
-  } */
   .cards__populaire,
   .cards__hebergement {
     align-items: center;
@@ -802,6 +804,7 @@ footer li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 20px 3vh;
   }
   .cards__activities {
     width: 100%;
@@ -829,6 +832,7 @@ footer li {
   footer {
     height: max-content;
     width: 100%;
+    min-width: 320px;
   }
   .footer__container {
     display: flex;
@@ -846,28 +850,37 @@ footer li {
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .body__container {
+    width: 100%;
+  }
+  main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 10px solid red;
   }
   header,
   #intro {
     padding: 0 20px;
   }
+  header,
+  .logo {
+    padding: 0 10px 10px;
+  }
   nav ul {
     justify-content: space-between;
   }
+  #intro {
+    height: 300px;
+  }
+  .title__container {
+    height: 60px;
+  }
   .filters {
-    height: 120px;
-    width: 72%;
-    /* flex-direction: column; */
+    height: 100px;
     justify-content: space-between;
-    /* padding-left: 10px; */
   }
   .filters ul {
     height: inherit;
-    width: 90%;
+    width: 100%;
     flex-wrap: wrap;
   }
 
@@ -903,22 +916,23 @@ footer li {
   .cards__populaire .card {
     width: 33%;
     min-width: 300px;
-    margin-bottom: 2.5%;
+    margin-bottom: 20px;
   }
 
   /************************* ACTIVITIES ***********************/
 
   #activities {
     order: 5;
+    padding: 0 20px 3vh;
   }
   .cards__activities {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    /* border: 1px solid red; */
   }
   .cards__activities .card {
-    margin-bottom: 2.5%;
+    margin-right: 5px;
+    margin-bottom: 20px;
     width: 30%;
   }
   .cards__activities .card .card__img {
