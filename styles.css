@@ -671,7 +671,7 @@ footer li {
     min-height: 350px;
     justify-content: space-between;
     order: 2;
-    padding: 2vh 20px 0;
+    padding: 30px 20px;
     gap: var(--flex-gap);
   }
   #intro form {
