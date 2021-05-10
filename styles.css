@@ -1,15 +1,20 @@
 /***************************************************************/
-/*                          GLOBAL RULES 
+/*                           THEME VARIABLES
 /***************************************************************/
 
 :root {
-  --bleu: #0065fc;
-  --bleu-clair: #deebff;
-  --background: #f2f2f2;
   --font: "Raleway", sans-serif;
+  --background-color: #f2f2f2;
+  --blue-primary: #0065fc;
+  --blue-secondary: #deebff;
+  --star-disabled: lightgray;
   --font-color: black;
   --flex-gap: 20px;
 }
+
+/***************************************************************/
+/*                          GLOBAL RULES 
+/***************************************************************/
 
 *,
 *::before,
@@ -55,7 +60,7 @@ button {
 
 .card {
   text-decoration: none;
-  color: black;
+  color: var(--font-color);
   transition: transform 0.25s;
   -webkit-font-smoothing: antialiased;
 }
@@ -90,7 +95,7 @@ nav {
 nav .line {
   height: 2px;
   width: calc(100% / 3);
-  background-color: var(--bleu);
+  background-color: var(--blue-primary);
   position: absolute;
   top: 0;
   left: 0;
@@ -113,11 +118,11 @@ nav ul li {
 }
 nav ul li:nth-child(3) a {
   font-weight: 700;
-  color: var(--bleu);
+  color: var(--blue-primary);
 }
 nav ul li a:hover {
   cursor: pointer;
-  color: var(--bleu);
+  color: var(--blue-primary);
   font-weight: bold;
 }
 nav ul li:nth-child(1):hover ~ .line {
@@ -130,10 +135,10 @@ nav ul li:nth-child(3):hover ~ .line {
   left: 240px;
 }
 nav .active {
-  color: var(--bleu);
+  color: var(--blue-primary);
 }
 
-/*************************** MAIN ************************/
+/***************************** MAIN ***************************/
 
 main {
   display: grid;
@@ -156,7 +161,7 @@ main {
   justify-content: space-between;
 }
 
-/*************************** SEARCH BAR ************************/
+/*************************** 1. SEARCH BAR ************************/
 
 .title__container {
   min-height: min-content;
@@ -172,37 +177,38 @@ form {
   justify-content: flex-start;
 }
 form .icon__container {
-  background-color: var(--background);
+  background-color: var(--background-color);
   width: 50px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--background-color);
 }
 form i {
-  color: black;
+  color: var(--font-color);
   font-size: 1rem;
 }
 form input {
   width: 230px;
   border-left: none;
   border-right: none;
-  border-top: 1px solid var(--background);
-  border-bottom: 1px solid var(--background);
+  border-top: 1px solid var(--background-color);
+  border-bottom: 1px solid var(--background-color);
   padding: 0 10px;
   font-size: 1.1rem;
   outline: none;
   border-radius: 0;
 }
 form input:hover {
-  border-top-color: var(--bleu);
-  border-bottom-color: var(--bleu);
+  border-top-color: var(--blue-primary);
+  border-bottom-color: var(--blue-primary);
 }
 form button {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: var(--bleu);
+  background-color: var(--blue-primary);
   font-size: 1.1rem;
   color: white;
   padding: 10px 15px;
@@ -220,7 +226,7 @@ form button:hover {
   cursor: pointer;
 }
 
-/**************************** FILTERS **************************/
+/**************************** 2. FILTERS **************************/
 
 .filters {
   min-height: 10vh;
@@ -246,7 +252,7 @@ form button:hover {
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  border: 2px solid var(--background);
+  border: 2px solid var(--background-color);
 }
 .filter__name {
   font-weight: bold;
@@ -256,7 +262,7 @@ form button:hover {
 .filter__btn {
   height: 40px;
   width: 40px;
-  background-color: var(--bleu-clair);
+  background-color: var(--blue-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,22 +275,22 @@ form button:hover {
   cursor: pointer;
 }
 .filter__btn i {
-  color: var(--bleu);
+  color: var(--blue-primary);
   font-size: 1rem;
 }
 .filter:hover {
   cursor: pointer;
-  color: var(--bleu);
-  border: 2px solid var(--bleu-clair);
+  color: var(--blue-primary);
+  border: 2px solid var(--blue-secondary);
 }
 .filter:hover .filter__btn {
-  background-color: var(--bleu);
+  background-color: var(--blue-primary);
 }
 .filter:hover .filter__btn i {
-  color: var(--bleu-clair);
+  color: var(--blue-secondary);
 }
 
-/****************************** INFO ***************************/
+/****************************** 3. INFO ***************************/
 
 .info {
   width: 100%;
@@ -304,7 +310,7 @@ form button:hover {
   margin-right: 1ch;
 }
 .info .icon__container i {
-  color: var(--bleu);
+  color: var(--blue-primary);
   font-size: 0.75rem;
 }
 
@@ -316,7 +322,7 @@ form button:hover {
 #populaire {
   height: 550px;
   max-height: 100%;
-  background-color: var(--background);
+  background-color: var(--background-color);
   border-radius: 20px;
   padding: 25px 20px;
 }
@@ -343,7 +349,7 @@ form button:hover {
   font-weight: 600;
 }
 i {
-  color: var(--bleu);
+  color: var(--blue-primary);
   font-size: 0.75rem;
   margin-right: 1%;
 }
@@ -422,7 +428,7 @@ i {
   justify-content: space-between;
 }
 #populaire .fa-chart-line {
-  color: black;
+  color: var(--font-color);
   font-size: 1.5rem;
   transform: translateY(4px);
 }
@@ -454,7 +460,6 @@ i {
   justify-content: space-between;
   padding: 5px 15px;
 }
-
 .cards__populaire p {
   line-height: 2rem;
 }
@@ -549,7 +554,6 @@ i {
 }
 .cards__activities :nth-child(4) .card__img {
   height: 350px;
-  filter: brightness(1.3);
 }
 .cards__activities :nth-child(5) .card__img {
   height: 120px;
@@ -572,7 +576,7 @@ i {
 footer {
   height: 200px;
   width: 100vw;
-  background-color: var(--background);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -770,7 +774,7 @@ footer li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 10px 20px 30px;
   }
   .cards__activities {
     width: 100%;
@@ -796,7 +800,7 @@ footer li {
   footer {
     height: max-content;
     min-width: 320px;
-    padding: 10px 20px;
+    padding: 20px;
   }
   .footer__container {
     display: flex;
@@ -884,7 +888,7 @@ footer li {
 
   #activities {
     order: 4;
-    padding: 0 20px 3vh;
+    padding: 0 20px 30px;
   }
   .cards__activities {
     display: flex;
