@@ -720,7 +720,7 @@ footer li {
     padding: 10px 15px;
   }
   .info {
-    transform: unset;
+    transform: translateY(10px);
   }
   main {
     margin-top: 0;
