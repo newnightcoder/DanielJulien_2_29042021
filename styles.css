@@ -679,14 +679,14 @@ footer li {
     width: 100%;
   }
   form input {
-    width: calc(100% - 105px);
+    width: calc(100% - 110px);
     max-width: 350px;
   }
   form .icon__container {
-    width: 50px;
+    width: 55px;
   }
   form i {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   form button {
     width: 55px;
