@@ -8,7 +8,7 @@ This project is the implementation of the mockup of the site, with html and css.
 
 **<u>Learning topics</u>**:
 
-- :: git workflow
+- git workflow
 - mockup integration
 - html/css structuring
 - flexbox / css grid
