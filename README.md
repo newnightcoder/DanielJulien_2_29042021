@@ -10,6 +10,7 @@ This project is the implementation of the mockup, with html and css.<br><br>
 <u>Learning topics</u>:
 
 - git workflow
+- mockup integration
 - html/css structuring
 - flexbox / css grid
 - responsiveness
