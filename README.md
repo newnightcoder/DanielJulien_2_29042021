@@ -7,7 +7,8 @@ This project is the implementation of the mockup, with html and css.<br><br>
 ![](https://jigsaw.w3.org/css-validator/images/vcss-blue)
 
 <br>
-<u>Learning topics</u>:
+
+<u>**Learning topics**</u>:
 
 - git workflow
 - mockup integration
