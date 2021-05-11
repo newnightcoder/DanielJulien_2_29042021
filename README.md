@@ -8,7 +8,7 @@ This project is the implementation of the mockup, with html and css.<br><br>
 
 <br>
 
-<u>**Learning topics**</u>:
+**<u>Learning topics</u>**:
 
 - git workflow
 - mockup integration
